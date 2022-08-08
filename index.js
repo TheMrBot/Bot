@@ -4,6 +4,11 @@ const {
   Partials,
   Collection,
 } = require("discord.js");
+
+require("http")
+  .createServer((req, res) => res.end("Bot is alive!"))
+  .listen(3000);
+
 const { Guilds, GuildMembers, GuildMessages } = GatewayIntentBits;
 const { User, Message, GuildMember, ThreadMember } = Partials;
 
